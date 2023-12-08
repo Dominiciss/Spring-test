@@ -7,5 +7,7 @@
 </head>
 <body>
     hola
+    <img th:if="${usersession != null && usersession.image != null}" th:src="@{/image/__${usersession.image.id}__}" width="64px" height="64px">
+    <img th:if="${usersession != null && usersession.image == null}" th:src="@{/img/user.png}" width="64px" height="64px">
 </body>
 </html>

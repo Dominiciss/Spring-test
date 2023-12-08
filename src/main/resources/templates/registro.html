@@ -6,10 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/registrar" method="post">
+    <form action="/registrar" method="post" enctype="multipart/form-data">
         Registro
         <input type="text" name="email">
         <input type="password" name="password">
+        <input type="file" name="file">
         <span th:if="${error}" th:text="${error}"></span>
         <button type="submit">enviar</button>
     </form>
